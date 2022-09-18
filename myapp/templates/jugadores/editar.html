@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Editar jugador {% endblock %}
+
+{% block contenido %}
+   
+<div class="card">
+    <div class="card-header">
+        Editar informacion jugador
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del jugador</h4>
+        {% include 'jugadores/form.html' %}
+    </div>
+    <div class="card-footer text-muted">
+       
+    </div>
+</div>
+   
+{% endblock %}
+   
+    

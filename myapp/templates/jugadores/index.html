@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %} Lista de informacion {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-succes" href="{% url 'crear' %}" role="button">Agregar jugador</a>
+    </div>
+    <div class="card-body">
+
+        <p class="card-title">Jugadores</p>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th>ID</th>                       
+                        <th>Nombre</th>
+                        <th>Numero de playera</th>
+                        <th>Edad</th>
+                        <th>Equipo</th>
+                        <th>Posicion</th>
+                        <th>Estadio</th>
+                        <th>Acciones</th>
+                    </tr>
+        
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Jazziel Bello Necochea</td>
+                        <td>10</td>
+                        <td>21</td>
+                        <td>Real Madrid</td>
+                        <td>Delantero</td>
+                        <td>Estadio Santiago Bernabeu</td>
+                        <td>
+                            <a name="" id="" class="btn btn-editar" href="{% url 'editar' %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-danger" href="#" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+
+
+    </div>
+
+
+</div>
+
+{% endblock %}
