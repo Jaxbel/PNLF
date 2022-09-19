@@ -30,7 +30,7 @@
                     
                     {% for jugador in jugadores %}
                     <tr>
-                        <td>{{ jugadores.id }}</td>
+                        <td>{{ jugador.id }}</td>
                         <td>{{ jugador.nombre }}</td>
                         <td>{{ jugador.numero_playera }}</td>
                         <td>{{ jugador.edad }} </td>
@@ -38,9 +38,9 @@
                         <td>{{ jugador.posicion }}</td>
                         <td>{{ jugador.estadio }}</td>
                         <td>
-                            <a name="" id="" class="btn btn-editar" href="{% url 'editar' %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-editar" href="{% url 'editar' id=jugador.id %}" role="button">Editar</a>
                             |
-                            <a name="" id="" class="btn btn-danger" href="#" role="button">Eliminar</a>
+                            <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' id=jugador.id %}" role="button">Eliminar</a>
                         </td>
                     </tr>                  
                     {% endfor %}

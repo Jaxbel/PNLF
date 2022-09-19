@@ -4,6 +4,31 @@
 
 {% block contenido %}
    
-<h1>Seccion de Nosotros</h1>
+<div class="table-responsive">
+    <table class="table table-primary">
+        <thead>
+            <tr>               
+                <th>Equipos</th>
+               
+            </tr>
+
+        </thead>
+        <tbody>
+            
+            {% for jugador in jugadores %}
+            <tr>
+               
+                <td>{{ jugador.equipo }}</td>
+                
+                <td>
+                    <a name="" id="" class="btn btn-editar" href="{% url 'editar' id=jugador.id %}" role="button">Editar</a>
+                    |
+                    <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' id=jugador.id %}" role="button">Eliminar</a>
+                </td>
+            </tr>                  
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
     
 {% endblock %}
